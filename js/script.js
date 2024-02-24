@@ -190,8 +190,7 @@ for(let i=0;i<totalSelect.length;i++)
 
 function changeFlag(element)
 {
- console.log(element);
- console.log(element.parentElement)
+ 
   for(let currency_code in country_list)
   {
     if(element.value===currency_code)
@@ -221,7 +220,7 @@ async function getExchangeRate()
     document.querySelector(".result p").style.backgroundColor="rgb(0, 0, 0,0.8)";
     document.querySelector(".result p").style.border="1px solid rgb(27, 156, 98)";
 
-    console.log(amountVal);
+    
     let apiKey=`7efdca813ac0589f604b60db`;
     let res=await fetch(`https://v6.exchangerate-api.com/v6/${apiKey}/latest/${fromSelect.value}`);
     let data=await res.json();
